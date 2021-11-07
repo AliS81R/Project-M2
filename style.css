@@ -1,0 +1,178 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 20px 0;
+
+	font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.container {
+	overflow: hidden;
+	width: 336px;
+
+	margin: 0 auto;
+	padding-bottom: 19px;
+	
+	border: 1px solid #c4c4c4;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.head {
+	background-color: #ffdc40;
+	height: 28px;
+	width: 100%;
+}
+
+.name-progr {
+	margin-top: 13px;
+	margin-bottom: 8px;
+	font-weight: 900;
+	line-height: 30px;
+	font-size: 26px;
+	text-align: center;
+}
+
+.sort {
+	align-self: flex-end;
+	margin-right: 22px;
+}
+
+.sort svg {
+	transition: all .25s ease;
+}
+
+.sort svg rect, .sort svg path {
+	fill: #c4c4c4;
+	transition: all .25s ease;
+}
+
+.sort:hover svg rect, .sort:hover svg path {
+	fill: #000;
+}
+
+.sort.rotate svg {
+	transform: rotate(180deg)
+}
+
+.tasks {
+	border: 1px solid #c4c4c4;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 13px 22px 0 22px;
+}
+
+.task {
+	position: relative;
+}
+
+.task:not(:first-child) {
+	margin-top: 10px;
+}
+
+.enter {
+	width: 100%;
+	padding: 5px 60px 5px 30px;
+	outline: none;
+	border: none;
+	font-size: 14px;
+}
+
+.delete {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	border: 1px solid #c4c4c4;
+	border-radius: 50%;
+	right: 30px;
+	top: calc(50% - 10px);
+	cursor: pointer;
+	transition: all .25s ease;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.delete:hover {
+	background: #833AE0;
+	border: 1px solid #833AE0;
+}
+
+.delete:hover:before, .delete:hover:after {
+	background: #fff;
+}
+
+.delete:before, .delete:after {
+	position: absolute;
+	transition: all .25s ease;
+	background-color: #c4c4c4;
+	content: '';
+	width: 1px;
+	height: 8px;
+}
+
+.delete:before {
+	transform: rotate(45deg);
+}
+
+.delete:after {
+	transform: rotate(-45deg);
+}
+
+.done {
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 45px;
+	color: rgba(229, 229, 229, 1);
+	font-size: 16px;
+	cursor: default;
+}
+
+.create {
+	margin-top: 18px;
+
+	width: 150px;
+	height: 42px;
+	border-radius: 71px;
+	align-self: center;
+
+	display: flex;
+	align-items: center;
+	background-color: #833ae0;
+
+	color: #fff;
+}
+
+.plus {
+	width: 42px;
+	height: 42px;
+	background-color: #9953F1;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add {
+	margin-left: 15px;
+}

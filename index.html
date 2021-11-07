@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<title>To-do list</title>
+	</head>
+	<body class="page">
+
+		<div class="container">
+			<div class="head"></div>
+
+			<h5 class="name-progr">To-Do List</h5>
+			
+			<button class="sort" id="buttonSort">
+				<svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="5" y="15" width="2.5" height="12.5" transform="rotate(-180 5 15)"/>
+					<rect x="10" y="3.75" width="2.5" height="7.5" transform="rotate(-90 10 3.75)" />
+					<rect x="10" y="8.75" width="2.5" height="10" transform="rotate(-90 10 8.75)" />
+					<rect x="10" y="13.75" width="2.5" height="15" transform="rotate(-90 10 13.75)"/>
+					<path d="M3.75 6.55671e-07L6.99759 4.6875L0.502404 4.6875L3.75 6.55671e-07Z"/>
+				</svg>
+			</button>
+			
+			<div id="tasks" class="tasks">
+				<div class="task" id="task-0">
+					<input class="enter" type="text" />
+					<button class="delete" onclick="deleteTask('task-0')"></button>
+				</div>
+			</div>
+
+			<button id="create" class="create">
+				<p class="plus">+</p>
+				<p class="add">Добавить</p>
+			</but>
+		</div>
+
+		<script src="js.js"></script>
+	</body>
+</html>
